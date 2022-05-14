@@ -7,14 +7,17 @@ public class SnakeAndLadder_Simulator {
     static final int NO_PLAY = 1;
     static final int LADDER = 2;
     static final int SNAKE = 3;
+    static int diceCount = 0;
 
     public static void main(String[] args) {
         int position = 0;
         System.out.println("position: "+position);
+
         while (position<100) {
             Random ran = new Random();
             int dice = ran.nextInt(6)+1;
             System.out.println("dice: "+dice);
+            ++diceCount;
             int optionCheck = ran.nextInt(3)+1;
             System.out.println("optionCheck: "+optionCheck);
 
@@ -34,8 +37,8 @@ public class SnakeAndLadder_Simulator {
             if (position<0) {
                 position =0;
             }
-            System.out.println("position: "+position);
+            System.out.println("position: "+position+"\ndicecount: "+diceCount);
+
         }
     }
-
 }
