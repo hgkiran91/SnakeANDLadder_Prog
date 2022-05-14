@@ -15,11 +15,11 @@ public class SnakeAndLadder_Simulator {
             Random ran = new Random();
             int dice = ran.nextInt(6)+1;
             System.out.println("dice: "+dice);
-            int optionCheck = ran.nextInt(3);
+            int optionCheck = ran.nextInt(3)+1;
             System.out.println("optionCheck: "+optionCheck);
 
 
-            if (optionCheck == LADDER) {
+            if ((optionCheck == LADDER) && (position+dice)<=100) {
                 System.out.println("ladder!!!");
                 position = position + dice;
             }
@@ -37,4 +37,5 @@ public class SnakeAndLadder_Simulator {
             System.out.println("position: "+position);
         }
     }
+
 }
